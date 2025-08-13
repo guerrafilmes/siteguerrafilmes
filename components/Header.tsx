@@ -11,10 +11,10 @@ export function Header() {
           <span className="text-sm uppercase tracking-[0.3em] opacity-80">Guerra Filmes</span>
         </Link>
         <nav className="flex items-center gap-3">
+          <a href="#portfolio" className="btn btn-ghost text-sm">Portfólio</a>
+          <a href="#como-trabalhamos" className="btn btn-ghost text-sm">Como trabalhamos</a>
           <Link href="/pacotes" className="btn btn-ghost text-sm">Pacotes</Link>
-          <Link href="#portfolio" className="btn btn-ghost text-sm">Portfólio</Link>
-          <Link href="/contato" className="btn btn-ghost text-sm">Contato</Link>
-          <Link href="#contato" className="btn btn-primary text-sm">WhatsApp</Link>
+          <Link href="/contato" className="btn btn-primary text-sm">WhatsApp</Link>
         </nav>
       </div>
     </header>

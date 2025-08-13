@@ -1,22 +1,28 @@
 import Link from 'next/link'
-import { waLink } from '@/lib/site'
+import { waLink } from '../lib/site'
 
 export function Hero() {
   return (
     <section className="relative">
       <div className="container grid gap-8 py-16 md:grid-cols-2 md:py-24">
         <div className="flex flex-col gap-6">
+          <div className="badge">Casamentos • Filmes autorais</div>
           <h1 className="text-4xl font-bold leading-tight md:text-5xl">
             Filmes de casamento que fazem sua história reviver.
           </h1>
           <p className="max-w-prose text-white/80">
-            Produção cinematográfica, som imersivo e narrativa com assinatura Guerra Filmes.
-            Atendemos Presidente Prudente e região.
+            Narrativa emocional, som imersivo e olhar cinematográfico. Assinatura Guerra Filmes para o seu dia.
           </p>
           <div className="flex gap-3">
             <Link href={waLink()} className="btn btn-primary">Pedir orçamento no WhatsApp</Link>
             <a href="#portfolio" className="btn btn-ghost">Ver portfólio</a>
           </div>
+          <ul className="mt-2 text-sm text-white/70 grid grid-cols-2 gap-x-6 gap-y-1">
+            <li>✔ Entrega ágil</li>
+            <li>✔ Captação em 4K</li>
+            <li>✔ Teaser + Filme</li>
+            <li>✔ Revisões inclusas</li>
+          </ul>
         </div>
         <div className="aspect-video overflow-hidden rounded-2xl ring-1 ring-white/10">
           <iframe
