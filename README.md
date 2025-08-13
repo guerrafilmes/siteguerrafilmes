@@ -1,29 +1,21 @@
-# Guerra Filmes — Site Next.js 14
+# Guerra Filmes — Site Next.js 14 (corrigido)
 
 ## 1) Rodar local
-- Requisitos: Node 18+
-- Instalar deps: `npm install`
-- Subir: `npm run dev` e abrir http://localhost:3000
+- Node 18+
+- `npm install`
+- `npm run dev` → http://localhost:3000
 
 ## 2) Publicar na Vercel
-- Crie conta em https://vercel.com (gratuita)
-- Clique **New Project** → **Import** (GitHub) ou **Deploy** via Upload
-- A Vercel gera uma URL do tipo `https://guerra-filmes.vercel.app`
+- Add New → Project → Import Git Repository (repo no GitHub) ou Upload
+- Deploy
 
 ## 3) Conectar domínio (Registro.br)
-- Projeto na Vercel → **Settings** → **Domains** → **Add** → `andreguerrafilmes.com.br`
-- No **registro.br**: em DNS do domínio, crie
-  - **A (apex)**: `@` → `76.76.21.21`
-  - **CNAME (www)**: `www` → `cname.vercel-dns.com`
-- Volte na Vercel e **Verify**.
+- Vercel → Project → Settings → Domains → Add → `andreguerrafilmes.com.br`
+- DNS no registro.br:
+  - A (apex @) → 76.76.21.21
+  - CNAME (www) → cname.vercel-dns.com
 
-## 4) Ajustes rápidos
-- Headline do Hero em `components/Hero.tsx`
-- Trocar logo em `/public/logo-guerra.png`
-- Vídeos em `lib/films.ts`
-- Cores em `tailwind.config.ts` e `app/globals.css`
-
-## 5) Próximas páginas
-- `/sobre` e blog (SEO)
-- `/pacotes` com valores e tabela comparativa
-- Eventos GA4/Pixel para cliques de WhatsApp e envio do Tally
+## Alterações desta versão
+- Imports relativos (sem `@/`) para evitar erros de resolução
+- `next.config.mjs` com alias `@` via webpack, caso queira usar `@/` no futuro
+- `tsconfig.json` com `baseUrl`/`paths` configurados
