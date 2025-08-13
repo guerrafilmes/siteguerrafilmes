@@ -2,24 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  color-scheme: dark;
-}
+:root { color-scheme: dark; }
 
-html, body {
-  @apply bg-brand-bg text-brand-fg;
-}
+html, body { @apply bg-brand-bg text-brand-fg; }
 
-.container {
-  @apply mx-auto max-w-6xl px-5;
-}
+.container { @apply mx-auto max-w-6xl px-5; }
 
-.btn {
-  @apply inline-flex items-center justify-center rounded-2xl px-5 py-3 font-medium transition;
-}
+.btn { @apply inline-flex items-center justify-center rounded-2xl px-5 py-3 font-medium transition; }
 .btn-primary { @apply bg-brand-accent text-white hover:opacity-90; }
 .btn-ghost { @apply border border-white/10 hover:bg-white/5; }
 
-.card {
-  @apply rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur;
-}
+.card { @apply rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur; }
+
+.badge { @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs uppercase tracking-widest; }
+.section { @apply container py-12 md:py-16; }
+.h2 { @apply mb-2 text-2xl font-semibold; }
+.p-muted { @apply text-white/70; }
